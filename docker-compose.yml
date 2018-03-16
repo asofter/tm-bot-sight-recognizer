@@ -1,0 +1,15 @@
+version: '3'
+services:
+  telegram_bot:
+    build: ./python
+    command: python bot.py
+    volumes:
+      - ./app/:/usr/src/app
+    ports:
+      - "8004:8004"
+
+  #tensorflow_bot:
+    #image: tensorflow/tensorflow:latest-py3
+    #volumes:
+      #- ./tensorflow:/tensorflow
+      #- ./tf_files:/tf_files
